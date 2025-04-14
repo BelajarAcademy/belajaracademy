@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -32,7 +33,7 @@ nav {
     position: fixed;
     top: 0;
     justify-content: center;
-    width: 70vh;
+    width: 50%;
     height: 50px;
     background: #34495e;
     border-radius: 8px;
@@ -115,7 +116,7 @@ nav::-webkit-scrollbar {
 /* Carousel Styling */
 .carousel {
     width: 100%;
-    margin-top: 20px; /* Tambahkan jarak antara navbar dan carousel */
+    margin-top: 10vh; /* Tambahkan jarak antara navbar dan carousel */
     overflow: hidden;
 }
 
@@ -137,8 +138,9 @@ nav::-webkit-scrollbar {
     height: auto;
     object-fit:fill;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 1px;
     transition: transform 0.5s ease;
+    margin-bottom: 0;
 }
 
 /* Animasi Carousel */
@@ -164,7 +166,6 @@ nav::-webkit-scrollbar {
 
 /* Hero Section */
 .hero {
-    margin-top: 60px;
     padding: 110px 20px 60px;
     text-align: center;
     color: white;
@@ -556,7 +557,9 @@ nav::-webkit-scrollbar {
     .hero-content h1 {
         font-size: 2rem;
     }
-
+    .carousel {
+        margin-top: 10vh;
+    }
     .feature-grid {
         flex-direction: column;
         align-items: center;
@@ -575,7 +578,7 @@ nav::-webkit-scrollbar {
     nav .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 5px;
     }
 
     nav a {
