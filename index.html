@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <title>Belajar Academy || Biaya Murah, Hasil Meriah</title>
+    <link rel="icon" type="image/x-icon" href="images/Belajar_Academy__1_-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html"> Home </a>
+        <a href="About.html"> About </a>
+        <a href="Event.html"> Event </a>
+        <a href="Testimonial.html"> Testimonial </a>
+        <a href="#contact"> Contact </a>
+        <a href="Tutor.html"> Tutor </a>  
+        <button onclick="loginWithGoogle()" class="bg-blue-500 text-white px-4 py-2 rounded">
+          Sign in with Google
+        </button>
+        <p id="user-info"></p>
+        <div class="animation start-home"></div>
+    </nav>
+    <!-- Navigation Bar -->
+    <!-- Carousel Section -->
+    <section class="carousel mt-4">
+        <div class="carousel-container overflow-hidden relative">
+            <div class="carousel-slide flex transition-transform duration-700">
+                <img src="images/Dokumentasi Infor.png">
+                <img src="images/Dokumentasi Fisika.png">
+                <img src="images/Dokumentasi Ekonomi.png">
+                <img src="images/Dokumentasi Biologi.png">
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+        <h1>Selamat Datang di <span class="highlight">Belajar Academy</span></h1>
+        <p>Tempat belajar OSN dengan biaya terjangkau dan hasil maksimal. Belajar jadi lebih menyenangkan dan produktif!</p>
+        <a href="Event.html" class="cta-button">Mulai Belajar</a>
+        </div>
+    </section>
+    
+  <!-- Features Section -->
+    <div>
+        <section id="features" class="features">
+            <h2>Kenapa Pilih Belajar Academy?</h2>
+            <div class="feature-grid">
+            <div class="feature-item">
+                <a href="Event.html" class=""><i class='bx bx-laptop'></i></a>
+                <h3>Kelas Online Interaktif</h3>
+                <p>Ikuti kelas online dari mana saja dengan materi yang mudah dipahami dan seru.</p>
+            </div>
+            <div class="feature-item">
+                <a href="Tryout.html" class=""><i class='bx bx-bar-chart-alt'></i></a>
+                <h3>Try Out & Pembahasan</h3>
+                <p>Uji kemampuanmu lewat try out berkualitas dengan pembahasan mendalam.</p>
+            </div>
+            <div class="feature-item">
+                <a href="Tutor.html" class=""><i class='bx bx-user-voice'></i></a>
+                <h3>Mentor Berpengalaman</h3>
+                <p>Belajar langsung dari mentor OSN yang berpengalaman dan inspiratif.</p>
+            </div>
+            </div>
+        </section>
+      
+    </div>
+    
+
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/Belajar-removebg-preview.png" alt="Belajar Academy Logo">
+            </div>
+          <div class="footer-section contact-info">
+            <p><i class="fas fa-envelope"></i> belajaracademy30@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +62 821-8160-9095</p>
+            <p><i class="fab fa-instagram"></i> belajar.academy</p>
+          </div>
+          <div class="footer-section">
+            <p><strong>Lokasi:</strong></p>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0357809971324!2d106.9649491740894!3d-6.256688393736535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69928f6f08c12d%3A0xb4e792ae3e553c6b!2sJatisari%2C%20Kec.%20Jatiasih%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017426!5e0!3m2!1sid!2sid!4v1713000000000" 
+              width="100%" 
+              height="180" 
+              style="border:0; border-radius: 8px; margin-top: 10px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="footer-section social-links">
+            <p><strong>Follow us:</strong></p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/belajar.academy" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/6282181609095" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Belajar Academy. All rights reserved.</p>
+        </div>
+      </footer>
+      
+      <!-- ✅ Inisialisasi Firebase + Login Script -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAQrQR7J_L1EZn8xlADqLyXbH2bPKvJnVk",
+        authDomain: "belajar-academy.firebaseapp.com",
+        projectId: "belajar-academy",
+        storageBucket: "belajar-academy.appspot.com",
+        messagingSenderId: "1234567890",
+        appId: "1:1234567890:web:xxxxxxx"
+      };
+
+      // Init Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      // Fungsi login dengan Google (Redirect)
+      function loginWithGoogle() {
+        auth.signInWithRedirect(provider);
+      }
+
+      // Tangani hasil login setelah redirect
+      auth.getRedirectResult().then((result) => {
+        if (result.user) {
+          const user = result.user;
+          document.getElementById("user-info").innerText =
+            `Halo, ${user.displayName} (${user.email})`;
+        }
+      }).catch((error) => {
+        console.error("Error login:", error.message);
+      });
+    </script>
+</body>
+</html>
