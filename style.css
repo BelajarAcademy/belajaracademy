@@ -30,7 +30,7 @@ h1, h2, h3, p {
 
 /* Navigation Bar */
 nav {
-    position: fixed;
+    position:relative;
     top: 0;
     justify-content: center;
     width: 50%;
@@ -40,9 +40,9 @@ nav {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem .3rem;
-    z-index: 999;
+    align-items: justify;
+    padding: 1rem .10rem;
+    z-index: 10;
     flex-wrap: wrap;
 }
 
@@ -51,11 +51,11 @@ nav a {
     text-transform: uppercase;
     color: white;
     line-height: 50px;
-    text-align: center;
+    text-align: justify;
+    align-self: start;
     transition: 0.3s;
-    display: inline-block;
-    position: relative;
-    padding: 0 10px;
+    position:static;
+    padding: 0 5vh;
 }
 
 nav .animation {
