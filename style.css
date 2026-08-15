@@ -118,8 +118,8 @@ nav::-webkit-scrollbar {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-    width: 100%;
-    margin-top: 10vh;
+    width: 88%;
+    margin-top: 2vh;
     overflow: hidden;
 }
 
