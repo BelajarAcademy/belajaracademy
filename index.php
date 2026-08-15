@@ -17,7 +17,7 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <a href="index.html"> Home </a>
+        <a href="index.php"> Home </a>
         <a href="About.html"> About </a>
         <a href="Event.html"> Event </a>
         <a href="Testimonial.html"> Testimonial </a>
